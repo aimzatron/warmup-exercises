@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
-require_relative './example'
+require_relative './primes'
 
 class SieveTest < MiniTest::Unit::TestCase
 
