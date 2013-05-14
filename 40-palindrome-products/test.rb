@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/pride'
+require 'prime'
 require_relative './example'
 
 class PalindromeTest < MiniTest::Unit::TestCase
@@ -21,6 +22,7 @@ class PalindromeTest < MiniTest::Unit::TestCase
   end
 
   def test_smallest_palindrome_from_double_digit_factors
+    skip
     palindromes = Palindromes.new(max_factor: 99, min_factor: 10)
     palindromes.generate
     smallest = palindromes.smallest
@@ -29,6 +31,7 @@ class PalindromeTest < MiniTest::Unit::TestCase
   end
 
   def test_largest_palindrome_from_triple_digit_factors
+    skip
     palindromes = Palindromes.new(max_factor: 999, min_factor: 100)
     palindromes.generate
     largest = palindromes.largest
@@ -37,6 +40,7 @@ class PalindromeTest < MiniTest::Unit::TestCase
   end
 
   def test_smallest_palindrome_from_triple_digit_factors
+    skip
     palindromes = Palindromes.new(max_factor: 999, min_factor: 100)
     palindromes.generate
     smallest = palindromes.smallest
