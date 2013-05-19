@@ -1,26 +1,16 @@
 class Year
-
   attr_reader :year
-  def initialize(number)
-    @year = number.to_i
+
+  def initialize(year)
+    @year = year
   end
 
   def leap?
-    by4 && (!by100 || by400)
-  end
-
-  private
-
-  def by4
-    (year % 4) == 0
-  end
-
-  def by100
-    (year % 100) == 0
-  end
-
-  def by400
-    (year % 400) == 0
+    if year % 4 == 0 && year % 100 != 0 || year % 4 == 0 && year % 400 == 0
+      true
+    else
+      false
+    end
   end
 
 end
