@@ -1,14 +1,10 @@
-grandma = Object.new
+class Grandma
 
-def grandma.hey something
-  if something.upcase == "BYE"
-    abort
-  elsif something.upcase == something
-    puts "NO, NOT SINCE #{ rand(1930..1950) }!"
-  else
-    puts "HUH? SPEAK UP"
+  def initialize(grandma)
+    @grandma = grandma
   end
 
+  def speak_up
+    "HUH?!  SPEAK UP, SONNY!"
+  end
 end
-
-loop{grandma.hey gets.chomp}

@@ -10,7 +10,11 @@ class Scrabble
   }
 
   def self.score(input)
-    input.upcase.split("").map{|letter| lookup(letter)}.inject(0, :+)
+    if input == nil
+      0
+    else 
+      input.upcase.split("").map{|letter| lookup(letter)}.inject(0, :+)
+    end
   end
 
   def self.lookup(letter)
