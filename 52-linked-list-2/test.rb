@@ -13,12 +13,10 @@ class LinkedListProxyTest < MiniTest::Unit::TestCase
   end
 
   def test_tail_is_num
-    skip
     assert_equal 100, @list.tail
   end
 
   def test_add
-    skip
     @list.add(101)
     assert_equal 101, @list.tail
   end
@@ -68,14 +66,17 @@ class LinkedListTest < MiniTest::Unit::TestCase
   end
 
   def test_head
+    skip
     assert_equal Element, @head.class
   end
 
   def test_head_datum
+    skip
     assert_equal 1, @head.datum
   end
 
   def test_add_next
+    skip
     @head.next = Element.new(2)
 
     refute_nil @head.next
@@ -86,15 +87,18 @@ end
 
 class LinkedListRangeTest < MiniTest::Unit::TestCase
   def setup
+    skip
     @list = LinkedList.new((1..10).to_a)
     @head = @list.instance_variable_get(:@head)
   end
 
   def test_head_next
+    skip
     assert_equal 2, @head.next.datum
   end
 
   def test_10_deep
+    skip
     assert_equal 10, @head.next.next.next.next.next.next.next.next.next.datum
   end
 end
