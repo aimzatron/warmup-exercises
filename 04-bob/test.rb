@@ -5,7 +5,7 @@ require_relative 'bob'
 class BobTest < MiniTest::Unit::TestCase
   attr_reader :bob
 
-  def setup
+ def setup
     @bob = Bob.new
   end
 

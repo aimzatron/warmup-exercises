@@ -23,6 +23,5 @@ class Bob
   def empty
     "Fine. Be that way."
   end
-
-
+  
 end
