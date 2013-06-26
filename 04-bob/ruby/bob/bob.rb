@@ -1,28 +1,27 @@
 class Bob
-  attr_reader :words
 
   def hey(words)
-    @words = words
-    if shouting
-      "Woah, chill out!"
-    elsif question
-      "Sure."
-    elsif empty
+
+    if silence?(words)
       "Fine. Be that way."
+    elsif shouting?(words)
+      "Woah, chill out!"
+    elsif asking?(words)
+      "Sure."
     else 
       "Whatever."
     end
   end
 
-  def shouting
-    words == words.upcase && words != ''
+  def shouting?(words)
+    words == words.upcase
   end
 
-  def question
+  def asking?(words)
     words.end_with? '?'
   end
 
-  def empty
+  def silence?(words)
     words.empty?
   end
 
